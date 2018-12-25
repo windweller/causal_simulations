@@ -431,7 +431,7 @@ class World():
 		assert len(path1) == len(path2)
 		# print 'lambda:', weight
 		# print 'exp_pdf:', [self.exp_pdf(i/100.0, weight) for i in range((len(path1)))]
-		print [self.exp_pdf(i/100.0, weight)*self.distance(path1[i], path2[i]) for i in range(len(path1))]
+		print([self.exp_pdf(i/100.0, weight)*self.distance(path1[i], path2[i]) for i in range(len(path1))])
 		return np.mean([self.exp_pdf(i/100.0, weight)*self.distance(path1[i], path2[i]) for i in range(len(path1))])
 		# return np.mean([self.distance(path1[i], path2[i]) for i in range(len(path1))])
 
@@ -662,7 +662,7 @@ class World():
 			pre_vel = np.array(act_vel[target_last_col - 1])
 			post_vel = np.array(act_vel[target_last_col + 1])
 
-			print act_paths[target][0][target_last_col]
+			print(act_paths[target][0][target_last_col])
 
 			# pre_vel = self.polar_convert(pre_x, pre_y)
 			# post_vel = self.polar_convert(post_x, post_y)
